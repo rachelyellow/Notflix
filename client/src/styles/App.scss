@@ -1,0 +1,338 @@
+.App {
+  text-align: center;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+
+  header {
+
+    #notflix-title {
+      font-size: 86px;
+      color: darkred;
+      margin: 3rem auto 0;
+      letter-spacing: -5px;
+      font-weight: 400;
+    }
+
+    button {
+      position: absolute;
+      width: 9rem;
+      outline: none;
+      padding: .5rem;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid white;
+      color: white;
+      background: black;
+      top: 100px;
+      left: 7rem;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 20px 0px rgba(white, 0.4);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(white, 0.4);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(white, 0.4);
+      }
+    }
+  }
+
+  .page-content {
+    display: flex;
+    height: 84vh;
+    justify-content: flex-start;
+    overflow: scroll;
+
+    .MainMenu {
+      margin: 3rem auto 5rem;
+      width: 100%;
+      padding: 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: center;
+
+      .menu-item {
+        width: 225px;
+        padding: 5rem 0;
+        margin: 1.5rem;
+        border: 1px solid #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        &:hover {
+          box-shadow: 0px 0px 100px 0px rgba(green, 0.4);
+          -moz-box-shadow: 0px 0px 100px 0px rgba(green, 0.4);
+          -webkit-box-shadow: 0px 0px 100px 0px rgba(green, 0.4);
+          border: 1px solid darkgreen;
+          color: green;
+          cursor: pointer
+        }
+      }
+    }
+
+    .tab-content {
+      width: 90vw;
+      // border: 1px solid white;
+      overflow: scroll;
+      padding: 2rem;
+      margin: 3rem auto 3rem;
+
+      #back-button {
+        position: absolute;
+        width: 9rem;
+        outline: none;
+        padding: .5rem;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: white;
+        background: black;
+        top: 150px;
+        left: 7rem;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0px 0px 20px 0px rgba(white, 0.4);
+          -moz-box-shadow: 0px 0px 20px 0px rgba(white, 0.4);
+          -webkit-box-shadow: 0px 0px 20px 0px rgba(white, 0.4);
+        }
+      }
+
+      h1 {
+        color: forestgreen;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+      }
+
+      li {
+        height: 15rem;
+        width: 270px;
+        border: 1px solid #fff;
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
+        &:hover {
+          h4 {
+            color: darkred;
+          }
+          h5 {
+            color: lightgreen;
+          }
+          transform: scale(1.01);
+          box-shadow: 0px 0px 10px 0px rgba(white, 0.4);
+          -moz-box-shadow: 0px 0px 10px 0px rgba(white, 0.4);
+          -webkit-box-shadow: 0px 0px 10px 0px rgba(white, 0.4);
+        }
+
+        h4 {
+          font-weight: bold;
+          font-size: 28px;
+          margin: 1rem;
+        }
+
+        h5 {
+          margin: .5rem;
+        }
+
+        p {
+          margin: 0.5rem;
+        }
+
+      }
+    }
+
+    .CreditBalance {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .MoviesByGenre {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1rem 0 6rem;
+      // margin: 130px auto 3rem;
+
+      h1 {
+        width: 100%;
+      }
+
+      .genre {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border: 1px solid white;
+        width: 19%;
+        margin: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 0px 100px 0px rgba(green, 0.4);
+          -moz-box-shadow: 0px 0px 100px 0px rgba(green, 0.4);
+          -webkit-box-shadow: 0px 0px 100px 0px rgba(green, 0.4);
+          border: 1px solid darkgreen;
+          color: green;
+        }
+
+      }
+    }
+
+  }
+}
+
+@media (max-width: 991px) {
+  .App {
+    header {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        padding: .5rem 1.5rem;
+        font-size: 18px;
+        border-radius: 5px;
+        border: 1px solid white;
+        color: white;
+        background: black;
+        position: relative;
+        margin: auto;
+        left: 0;
+        top: 20px;
+        width: fit-content;
+      }
+    }
+
+    .page-content {
+
+      .tab-content {
+        #back-button {
+          border-radius: 5px;
+          top: 172px;
+        }
+      }
+
+      .MainMenu {
+        .menu-item {
+          width: 200px;
+          padding: 4.5rem 0;
+          font-size: 18px;
+        }
+      }
+
+      .tab-content {
+        width: 90vw;
+        // border: 1px solid white;
+        overflow: scroll;
+        padding: 2rem;
+        margin: 3rem auto 3rem;
+  
+        li {
+          height: 10rem;
+          width: 180px;
+          padding: 1rem;
+          margin: 1.2rem;
+          h4 {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .MoviesByGenre {
+        .genre {
+          width: 40%;
+          margin: 2rem;
+        }
+      }
+  
+
+
+
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .App {
+    .page-content {
+
+      .tab-content {
+        #back-button {
+          top: 220px;
+          left: 40%;
+        }
+
+        li {
+          display: flex;
+          padding: 1.5rem;
+          flex-direction: row;
+          width: 80%;
+          height: auto;
+          align-content: center;
+          justify-content: space-between;
+          margin: 1rem;
+
+          h4 {
+            margin: 0.25rem;
+            font-size: 20px;
+          }
+        }
+
+      }
+
+      .MainMenu {
+        .menu-item {
+          width: 80%;
+          padding: 2rem 0;
+          font-size: 18px;
+          margin: 1rem;
+        }
+      }
+
+      .MoviesByGenre {
+        margin: 5rem auto 3rem;
+        .genre {
+          width: 80%;
+          margin: 1rem;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    .page-content {
+      .MainMenu {
+        .menu-item {
+          padding: 2rem 0;
+          font-size: 18px;
+          margin: .5rem;
+        }
+      }
+
+      .tab-content {
+        li {
+          h6 {
+            margin: .8rem 0;
+          }
+        }
+        
+      }
+
+      .MoviesByGenre {
+        .genre {
+          width: 100%;
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
