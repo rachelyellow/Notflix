@@ -4,6 +4,8 @@
 
 ## Getting Started
 
+`git clone https://github.com/rachelyellow/Notflix.git`
+
 #### Terminal 1:
 - `cd server` to access the backend API.
 - `npm i` to install all dependencies.
